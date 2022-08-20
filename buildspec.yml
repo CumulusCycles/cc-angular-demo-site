@@ -29,7 +29,7 @@ phases:
        - echo "Clearing Bucket..."
        - aws s3 rm s3://${BUCKET_NAME} --recursive
        - echo "Copying files to Bucket..."
-       - aws s3 sync ./${BUILD_FOLDER}/${APP_NAME} s3://${BUCKET_NAME} --delete --acl public-read 
+       - aws s3 sync ./${BUILD_FOLDER}/${APP_NAME} s3://${BUCKET_NAME} --delete
        - echo Build complete on 'date' 
 artifacts:
    files:
